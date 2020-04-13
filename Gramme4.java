@@ -12,4 +12,18 @@ public class Gramme4 extends Gramme3 {
     public String getMot4() {
         return mot4;
     }
+
+    //Méthods :
+
+    @Override
+    public boolean equals (Object otherObject){
+        boolean result;
+        if(!super.equals(otherObject)){
+            result = false;
+        }else{
+            Gramme4 other = (Gramme4) otherObject;
+            result = mot4.equals(other.mot4);
+        }
+        return result;
+    }
 }

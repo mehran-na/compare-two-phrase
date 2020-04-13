@@ -13,4 +13,16 @@ public class Gramme3 extends Gramme2 {
     }
 
     //Methods:
+
+    @Override
+    public boolean equals (Object otherObject){
+        boolean result;
+        if(!super.equals(otherObject)){
+            result = false;
+        }else{
+            Gramme3 other = (Gramme3) otherObject;
+            result = mot3.equals(other.mot3);
+        }
+        return result;
+    }
 }

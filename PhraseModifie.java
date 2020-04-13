@@ -4,12 +4,20 @@ public class PhraseModifie {
     //Constructors:
 
     public PhraseModifie(String phrase) {
-        String phraseLocal = enleverPointFinDeString(phrase);
-        phraseLocal = changerNonLettrehAvecSpace(phraseLocal);
-        this.phrase = phraseLocal.trim().replaceAll("\\s{2,}", " ");
+        if(phrase.length() != 0){
+            String phraseLocal = enleverPointFinDeString(phrase);
+            phraseLocal = changerNonLettrehAvecSpace(phraseLocal);
+            this.phrase = phraseLocal.trim().replaceAll("\\s{2,}", " ");
+        }else {
+            System.err.println("Phrase est vide !!");
+            System.exit(-1);
+        }
     }
 
     //Methods:
+
+    
+
     private String enleverPointFinDeString(String str) {
         char c = str.charAt(str.length() - 1);
         if (!(c >= 'A' && c <= 'Z') && !(c >= 'a' && c <= 'z')) {

@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -19,6 +17,7 @@ public class Main {
 
         //Creer inventaire pour phrase1
         Inventaire inventaire1 = new Inventaire(phraseModifie1.getPhrase());
+
         inventaire1.creerGrmme1();
         inventaire1.creerGrmme2();
         inventaire1.creerGrmme3();
@@ -31,10 +30,14 @@ public class Main {
         inventaire2.creerGrmme3();
         inventaire2.creerGrmme4();
 
+        inventaire1.nombreGrammeCommun(inventaire2);
+        inventaire1.claculRappel(inventaire2);
+        inventaire1.claculPrecision();
+        inventaire1.claculMesure();
+
 
         System.out.println(inventaire1.toString());
-        System.out.println("\n\n");
-        System.out.println(inventaire2.toString());
+
 
 
         Console.msgFin();
