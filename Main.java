@@ -37,7 +37,8 @@ public class Main {
 
 
         System.out.println(inventaire1.toString());
-
+        //Lors de la construction d'un tableau.
+        //Lors de la construction d’un logiciel contenant un tableau.
 
 
         Console.msgFin();

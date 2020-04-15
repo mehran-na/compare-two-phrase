@@ -141,14 +141,14 @@ public class Inventaire {
     //f-mesures :
     public void claculMesure() {
         F.add(
-                (r.get(0) * q.get(0)) / (r.get(0) + q.get(0))
+                2 * (r.get(0) * q.get(0)) / (r.get(0) + q.get(0))
         );
 
         if (r.get(1) == 0 && q.get(1) == 0) {
             F.add(0.0);
         }else{
             F.add(
-                    (r.get(1) * q.get(1)) / (r.get(1) + q.get(1))
+                    2 * (r.get(1) * q.get(1)) / (r.get(1) + q.get(1))
             );
         }
 
@@ -156,7 +156,7 @@ public class Inventaire {
             F.add(0.0);
         }else{
             F.add(
-                    (r.get(2) * q.get(2)) / (r.get(2) + q.get(2))
+                    2 * (r.get(2) * q.get(2)) / (r.get(2) + q.get(2))
             );
         }
 
@@ -164,7 +164,7 @@ public class Inventaire {
             F.add(0.0);
         }else{
             F.add(
-                    (r.get(3) * q.get(3)) / (r.get(3) + q.get(3))
+                    2 * (r.get(3) * q.get(3)) / (r.get(3) + q.get(3))
             );
         }
 
@@ -221,15 +221,15 @@ public class Inventaire {
     public String toString() {
         return
                 "\n" +
-                "c1= " + c.get(0) + ", " + "c2= " + c.get(1) + ", " + "c3= " + c.get(2) + ", " + "c4= " + c.get(3) + ", " +
-                "\n" +
+                        "c1= " + c.get(0) + ", " + "c2= " + c.get(1) + ", " + "c3= " + c.get(2) + ", " + "c4= " + c.get(3) + ", " +
+                        "\n" +
 
-                "r1= " + r.get(0) + ", " + "r2= " + r.get(1) + ", " + "r3= " + r.get(2) + ", " + "r4= " + r.get(3) + ", " +
-                "\n" +
+                        "r1= " + r.get(0) + ", " + "r2= " + r.get(1) + ", " + "r3= " + r.get(2) + ", " + "r4= " + r.get(3) + ", " +
+                        "\n" +
 
-                "q1= " + q.get(0) + ", " + "q2= " + q.get(1) + ", " + "q3= " + q.get(2) + ", " + "q4= " + q.get(3) + ", " +
-                "\n" +
+                        "q1= " + q.get(0) + ", " + "q2= " + q.get(1) + ", " + "q3= " + q.get(2) + ", " + "q4= " + q.get(3) + ", " +
+                        "\n" +
 
-                "F1= " + F.get(0) + ", " + "F2= " + F.get(1) + ", " + "F3= " + F.get(2) + ", " + "F4= " + F.get(3);
+                        "F1= " + F.get(0) + ", " + "F2= " + F.get(1) + ", " + "F3= " + F.get(2) + ", " + "F4= " + F.get(3);
     }
 }
