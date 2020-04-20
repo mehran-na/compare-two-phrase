@@ -21,7 +21,7 @@ public class Gramme2 extends Gramme1 {
             result = false;
         }else{
             Gramme2 other = (Gramme2) otherObject;
-            result = mot2.equals(other.mot2);
+            result = mot2.toLowerCase().equals(other.mot2.toLowerCase());
         }
         return result;
     }

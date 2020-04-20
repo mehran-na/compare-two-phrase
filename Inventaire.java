@@ -58,7 +58,7 @@ public class Inventaire {
         }
     }
 
-    //c1 :
+    //cardinalité :
     public void nombreGrammeCommun(Inventaire inventaire) {
         int c1 = 0;
         int c2 = 0;
@@ -66,22 +66,22 @@ public class Inventaire {
         int c4 = 0;
 
         for(Gramme1 item : grammes1) {
-            if (inventaire.grammes1.contains(item))
+            if (inventaire.grammes1.contains(item) && c1 < inventaire.grammes1.size())
                 c1++;
         }
 
         for(Gramme2 item : grammes2) {
-            if (inventaire.grammes2.contains(item))
+            if (inventaire.grammes2.contains(item) && c2 < inventaire.grammes2.size())
                 c2++;
         }
 
         for(Gramme3 item : grammes3) {
-            if (inventaire.grammes3.contains(item))
+            if (inventaire.grammes3.contains(item) && c3 < inventaire.grammes3.size())
                 c3++;
         }
 
         for(Gramme4 item : grammes4) {
-            if (inventaire.grammes4.contains(item))
+            if (inventaire.grammes4.contains(item) && c4 < inventaire.grammes4.size())
                 c4++;
         }
 
@@ -140,10 +140,13 @@ public class Inventaire {
 
     //f-mesures :
     public void claculMesure() {
-        F.add(
-                2 * (r.get(0) * q.get(0)) / (r.get(0) + q.get(0))
-        );
-
+        if (r.get(1) == 0 && q.get(1) == 0) {
+            F.add(0.0);
+        }else{
+            F.add(
+                    2 * (r.get(0) * q.get(0)) / (r.get(0) + q.get(0))
+            );
+        }
         if (r.get(1) == 0 && q.get(1) == 0) {
             F.add(0.0);
         }else{
@@ -170,56 +173,52 @@ public class Inventaire {
 
     }
 
-    // @Override
-    /*public String toString() {
+    @Override
+    public String toString() {
         String str = "\n\n";
 
         str += "grammes1 ";
-        if (grammes1 != null) {
+        if (!grammes1.isEmpty()) {
             for(Gramme1 item : grammes1) {
                 str += "(" + item.getMot1() + ") , ";
             }
         }else{
-            str += "null";
+            str += "[]";
         }
 
 
         str += "\n";
         str += "grammes2 ";
-        if (grammes2.size() != 0) {
+        if (!grammes2.isEmpty()) {
             for(Gramme2 item : grammes2) {
                 str += "(" + item.getMot1() + "," + item.getMot2() + ") , ";
             }
         }else{
-            str += "empty";
+            str += "[]";
         }
 
         str += "\n";
         str += "grammes3 ";
-        if (grammes3 != null) {
+        if (!grammes3.isEmpty()) {
             for(Gramme3 item : grammes3) {
                 str += "(" + item.getMot1() + "," + item.getMot2() + "," + item.getMot3() + ") , ";
             }
         }else{
-            str += "null";
+            str += "[]";
         }
 
 
         str += "\n";
         str += "grammes4 ";
-        if(grammes4 != null){
+        if (!grammes4.isEmpty()) {
             for(Gramme4 item : grammes4) {
                 str += "(" + item.getMot1() + "," + item.getMot2() + "," + item.getMot3() + "," + item.getMot4() + ") , ";
             }
-        }else {
-            str += "null";
+        }else{
+            str += "[]";
         }
-        return str;
-    }*/
+        str +=
 
-    @Override
-    public String toString() {
-        return
                 "\n" +
                         "c1= " + c.get(0) + ", " + "c2= " + c.get(1) + ", " + "c3= " + c.get(2) + ", " + "c4= " + c.get(3) + ", " +
                         "\n" +
@@ -231,5 +230,7 @@ public class Inventaire {
                         "\n" +
 
                         "F1= " + F.get(0) + ", " + "F2= " + F.get(1) + ", " + "F3= " + F.get(2) + ", " + "F4= " + F.get(3);
+
+        return str;
     }
 }

@@ -29,7 +29,7 @@ public class Gramme1 {
             // now we know otherObject is a non-null Employee
             Gramme1 other = (Gramme1) otherObject;
             // test whether the fields have identical values
-            result = mot1.equals(other.mot1);
+            result = mot1.toLowerCase().equals(other.mot1.toLowerCase());
         }
         return result;
     }

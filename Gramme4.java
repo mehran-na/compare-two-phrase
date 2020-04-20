@@ -22,7 +22,7 @@ public class Gramme4 extends Gramme3 {
             result = false;
         }else{
             Gramme4 other = (Gramme4) otherObject;
-            result = mot4.equals(other.mot4);
+            result = mot4.toLowerCase().equals(other.mot4.toLowerCase());
         }
         return result;
     }
