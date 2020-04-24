@@ -7,7 +7,8 @@ public class Console {
      * @description Méthod msgBienvenue, pour afficher le message de bienvenue
      */
     public static void msgBienvenue() {
-        System.out.println(Consts.MSG_BIENVENUE);
+        System.out.println("\n****************************************************************************************");
+        System.out.println("\t\t\t\t" + Consts.MSG_BIENVENUE + Consts.AUTEUR);
     }
 
     /**
@@ -15,6 +16,7 @@ public class Console {
      */
     public static void msgResume() {
         System.out.println(Consts.MSG_RESUME);
+        System.out.println("****************************************************************************************\n");
     }
 
     /**
@@ -26,8 +28,8 @@ public class Console {
 
     /**
      * @param prompt message pour demander phrase à l'utilisateur
-     * @return arn
-     * @description Méthod lirePhrase, pour demander phrase à l'utilisateur
+     * @return phrase
+     * @description Méthod lirePhrase, pour demander la phrase à l'utilisateur
      */
     public static String lirePhrase(String prompt) {
         String phrase = "";
@@ -35,6 +37,4 @@ public class Console {
         phrase = scanner.nextLine();
         return phrase;
     }
-
-
 }

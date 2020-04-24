@@ -8,21 +8,28 @@ public class Gramme3 extends Gramme2 {
         this.mot3 = mot3;
     }
 
-    public String getMot3() {
-        return mot3;
-    }
-
     //Methods:
 
+    /*
+     * Override method equals pour utilise dans comparaison des grammes
+     *
+     * @param : autreObjet
+     * @return : boolean si ils sont equal alors return true sinon return false
+     * */
     @Override
-    public boolean equals (Object otherObject){
-        boolean result;
-        if(!super.equals(otherObject)){
-            result = false;
+    public boolean equals (Object autreObjet){
+        boolean resultat;
+        if(!super.equals(autreObjet)){
+            resultat = false;
         }else{
-            Gramme3 other = (Gramme3) otherObject;
-            result = mot3.toLowerCase().equals(other.mot3.toLowerCase());
+            Gramme3 autre = (Gramme3) autreObjet;
+            resultat = mot3.toLowerCase().equals(autre.mot3.toLowerCase());
         }
-        return result;
+        return resultat;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "," + "\"" + mot3 + "\"";
     }
 }
