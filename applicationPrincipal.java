@@ -35,6 +35,8 @@ public class applicationPrincipal {
 
         //Creer l'object d'inventaire pour la phrase Cible
         Inventaire listPhraseCible = new Inventaire(phraseCibleModifie.getPhrase(), "phrase cible");
+
+        //Creer les arraylists (grammes1, grammes2, grammes3, grammes4) pour phrase cible
         listPhraseCible.creerGrmme1();
         listPhraseCible.creerGrmme2();
         listPhraseCible.creerGrmme3();

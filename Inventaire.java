@@ -1,4 +1,3 @@
-import javax.swing.text.FieldView;
 import java.util.*;
 
 public class Inventaire {

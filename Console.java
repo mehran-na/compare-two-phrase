@@ -8,7 +8,7 @@ public class Console {
      */
     public static void msgBienvenue() {
         System.out.println("\n****************************************************************************************");
-        System.out.println("\t\t\t\t" + Consts.MSG_BIENVENUE + Consts.AUTEUR);
+        System.out.println("\t\t\t\t" + Consts.MSG_BIENVENUE + Consts.AUTOR);
     }
 
     /**
